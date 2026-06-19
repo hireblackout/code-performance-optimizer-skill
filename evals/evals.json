@@ -1,0 +1,23 @@
+{
+  "skill_name": "code-performance-optimizer-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our checkout API got slower after we added promo validation. p95 went from ~280ms to ~640ms at 600 RPS, CPU is 85%, DB pool saturation spikes, and we are seeing occasional 500s. Please optimize it for production without weakening security controls. We need a rollout plan with rollback triggers.",
+      "expected_output": "Returns a structured optimization plan with baseline, hotspot analysis, Big-O reasoning, ranked fixes, security impact checks, validation steps, and canary/rollback criteria tied to SLOs.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have a background reconciliation job processing 8 million ledger rows nightly. It currently takes 3h 40m and sometimes OOMs. We can change data structures and query strategy, but this must stay correct for financial records and must not leak PII in logs or metrics.",
+      "expected_output": "Provides complexity-focused redesign (streaming/chunking/index/query improvements), correctness and security guardrails, before/after measurement plan, and safe deployment guidance.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Need to speed up our search suggestions endpoint. Team proposes aggressive caching and skipping some auth checks for internal users to reduce latency. Please produce a production-safe optimization approach that improves p99 and keeps us aligned with OWASP/ASVS expectations.",
+      "expected_output": "Rejects unsafe shortcuts, proposes secure alternatives, includes cache design with invalidation strategy, preserves authorization model, and outputs measurable perf + security validation plan.",
+      "files": []
+    }
+  ]
+}
